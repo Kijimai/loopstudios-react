@@ -88,7 +88,7 @@ body {
   max-width: 88%;
 }
 
-.cta {
+.main-header {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -98,19 +98,26 @@ body {
 }
 
 @media screen and (min-width: 600px) {
-  .cta {
+  .main-header {
     min-height: 65rem;
     background-size: cover;
     background-image: url("../images/desktop/image-hero.jpg");
   }
 }
 .navigator {
+  z-index: 2;
+  width: 100%;
   position: relative;
   display: flex;
-  justify-content: space-between;
   justify-self: flex-start;
-  width: 100%;
   margin: 4rem 2.4rem 0;
+}
+.navigator .inner-nav {
+  z-index: 3;
+  position: sticky;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navBtn {
@@ -168,6 +175,10 @@ body {
   border: 2px solid hsl(var(--color-white));
   color: hsl(var(--color-white));
   font-weight: 300;
+}
+
+.secondary-header {
+  position: relative;
 }
 
 /*# sourceMappingURL=app.css.map */

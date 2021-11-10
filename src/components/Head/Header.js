@@ -4,7 +4,7 @@ import Hero from "./Hero"
 
 const Header = () => {
   return (
-    <header className="cta">
+    <header className="main-header">
       <Navigator />
       <Hero />
     </header>

@@ -8,13 +8,23 @@ const Navigator = () => {
   const { navActive, handleNavBtn } = useGlobalContext()
 
   return (
-    <nav className="navigator">
-      <div className="nav-logo">
-        <img src={logo} alt="site logo" />
+    <nav
+      className="navigator"
+      style={{
+        position: navActive ? "fixed" : "relative"
+      }}
+    >
+      <div className="inner-nav">
+        <div className="nav-logo">
+          <img src={logo} alt="site logo" />
+        </div>
+        <button onClick={handleNavBtn} className="navBtn">
+          <img
+            src={navActive ? navClose : navHamburger}
+            alt="hamburger button"
+          />
+        </button>
       </div>
-      <button onClick={handleNavBtn} className="navBtn">
-        <img src={navActive ? navClose : navHamburger} alt="hamburger button" />
-      </button>
       <div className={`nav-items-container ${navActive && "active"}`}>
         <ul className="nav-items">
           {data.map((link, index) => {
@@ -24,12 +34,6 @@ const Navigator = () => {
               </li>
             )
           })}
-          <button onClick={handleNavBtn} className="navBtn">
-            <img
-              src={navActive ? navClose : navHamburger}
-              alt="hamburger button"
-            />
-          </button>
         </ul>
       </div>
     </nav>
