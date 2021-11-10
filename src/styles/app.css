@@ -88,6 +88,14 @@ body {
   max-width: 88%;
 }
 
+@media screen and (min-width: 600px) {
+  .navigator,
+.main,
+.hero {
+    margin: 0 auto;
+    max-width: 77%;
+  }
+}
 .main-header {
   display: flex;
   flex-direction: column;
@@ -166,7 +174,6 @@ body {
 .hero {
   transform: translateY(100%);
 }
-
 .hero h1 {
   line-height: 1;
   font-size: 4rem;
@@ -177,8 +184,72 @@ body {
   font-weight: 300;
 }
 
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 65rem;
+  }
+  .hero h1 {
+    font-size: 7.2rem;
+  }
+}
 .secondary-header {
+  text-align: center;
   position: relative;
+  margin: 9.6rem 0;
+}
+.secondary-header .secondary-header-img-container {
+  margin-bottom: 4.8rem;
+}
+.secondary-header .secondary-header-info {
+  background-color: hsl(var(--color-white));
+}
+.secondary-header .secondary-header-info h2 {
+  line-height: 1;
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 1.6rem;
+}
+.secondary-header .secondary-header-info p {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .mobileImg {
+    display: block;
+  }
+
+  .desktopImg {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .secondary-header {
+    text-align: left;
+  }
+  .secondary-header .secondary-header-info {
+    max-width: 54rem;
+    padding-top: 9.6rem;
+    padding-left: 9.6rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .secondary-header .secondary-header-info h2 {
+    margin-bottom: 2.5rem;
+  }
+
+  .mobileImg {
+    display: none;
+  }
+
+  .desktopImg {
+    display: block;
+    height: 100%;
+    width: 100%;
+    max-width: 73.1rem;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
