@@ -4,6 +4,7 @@ const Hero = () => {
   const { navActive } = useGlobalContext()
 
   return (
+    //Styled to maintain position when navbar goes to position fixed
     <div
       className="hero"
       style={{

@@ -305,6 +305,15 @@ body {
       border: 0.1rem solid hsl(var(--color-black));
       font-family: "Alata", sans-serif;
       letter-spacing: 0.5rem;
+
+      &:hover {
+        color: hsl(var(--color-white));
+        background-color: hsl(var(--color-black));
+      }
+    }
+
+    .seeAll-btn:nth-of-type(2) {
+      display: none;
     }
 
     .creations-content-container {
@@ -348,6 +357,32 @@ body {
         }
         h3 {
           color: hsl(var(--color-black));
+        }
+      }
+    }
+    @media screen and (min-width: 768px) {
+      .creations-inner-container {
+        
+        .seeAll-btn:nth-of-type(1) {
+          display: block;
+        }
+
+        .seeAll-btn:nth-of-type(2) {
+          display: none;
+        }
+
+        .creations-content-container {
+          order: 2;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 3rem;
+
+          .creation-box {
+            height: auto;
+            height: 45rem;
+            max-width: 25rem;
+          }
         }
       }
     }

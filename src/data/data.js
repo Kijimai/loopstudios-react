@@ -50,11 +50,6 @@ export const creationsData = [
     imgMobile: pocketBorealisMobile,
   },
   {
-    title: "Deep Earth",
-    imgDesktop: deepEarthDesktop,
-    imgMobile: deepEarthMobile,
-  },
-  {
     title: "The Curiosity",
     imgDesktop: curiosityDesktop,
     imgMobile: curiosityMobile,

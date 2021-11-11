@@ -11,7 +11,7 @@ const Navigator = () => {
     <nav
       className="navigator"
       style={{
-        position: navActive ? "fixed" : "relative"
+        position: navActive ? "fixed" : "relative",
       }}
     >
       <div className="inner-nav">
