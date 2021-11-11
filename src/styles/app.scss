@@ -281,109 +281,140 @@ body {
 .creations {
   margin: 9.6rem 0;
 
-  .creations-inner-container {
-    display: flex;
-    flex-direction: column;
+  .seeAll-btn {
+    cursor: pointer;
+    align-self: center;
+    order: 2;
+    font-size: 1.4rem;
+    padding: 1.3rem 4rem;
+    margin-top: 3.4rem;
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 0.1rem solid hsl(var(--color-black));
+    font-family: "Alata", sans-serif;
+    letter-spacing: 0.5rem;
 
+    &:hover {
+      color: hsl(var(--color-white));
+      background-color: hsl(var(--color-black));
+    }
+  }
+
+  .creations-header-container {
+    display: flex;
+    justify-content: center;
     h2 {
       font-size: 3.2rem;
       font-weight: 300;
       text-transform: uppercase;
-      text-align: center;
       margin-bottom: 4.8rem;
     }
+    .seeAll-btn.btn1 {
+      display: none;
+    }
+  }
 
-    .seeAll-btn {
+  .creations-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 100%;
+
+    .creation-box {
+      position: relative;
       cursor: pointer;
-      align-self: center;
-      order: 2;
-      font-size: 1.4rem;
-      padding: 1.3rem 4rem;
-      margin-top: 3.4rem;
-      background-color: transparent;
-      text-transform: uppercase;
-      border: 0.1rem solid hsl(var(--color-black));
-      font-family: "Alata", sans-serif;
-      letter-spacing: 0.5rem;
+      min-height: 12rem;
+      width: 100%;
 
-      &:hover {
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(
+          hsl(var(--color-white) / 0.1),
+          hsl(var(--color-black) / 0.7)
+        );
+      }
+
+      .creation-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.3s ease opacity;
+      }
+
+      h3 {
+        z-index: 3;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        padding: 2rem;
         color: hsl(var(--color-white));
-        background-color: hsl(var(--color-black));
+        font-weight: 300;
+        line-height: 1;
+        max-width: 20rem;
       }
     }
 
-    .seeAll-btn:nth-of-type(2) {
-      display: none;
+    .creation-box:hover {
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(
+          hsl(var(--color-white) / 0),
+          hsl(var(--color-black) / 0)
+        );
+      }
+
+      .creation-img {
+        opacity: 0.5;
+      }
+      h3 {
+        font-weight: 600;
+        color: hsl(var(--color-black));
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .creations-header-container {
+      justify-content: space-between;
+
+      h2 {
+        font-size: 4.8rem;
+        margin-bottom: 0;
+      }
+
+      .seeAll-btn.btn1 {
+        display: block;
+        margin-top: 0;
+      }
     }
 
     .creations-content-container {
-      display: flex;
-      flex-direction: column;
-      gap: 2.4rem;
-      width: 100%;
+      order: 2;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
 
       .creation-box {
-        position: relative;
-        cursor: pointer;
-        min-height: 12rem;
-        width: 100%;
-
-        .creation-img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          transition: 0.3s ease opacity;
-        }
-
-        h3 {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          font-size: 2.4rem;
-          text-transform: uppercase;
-          padding: 2rem;
-          color: hsl(var(--color-white));
-          font-weight: 300;
-          line-height: 1;
-          max-width: 20rem;
-        }
+        height: auto;
+        height: 45rem;
+        max-width: 25rem;
       }
 
-      .creation-box:hover {
-        .creation-img {
-          opacity: 0.5;
-        }
-        h3 {
-          color: hsl(var(--color-black));
-        }
-      }
-    }
-    @media screen and (min-width: 768px) {
-      .creations-inner-container {
-        
-        .seeAll-btn:nth-of-type(1) {
-          display: block;
-        }
-
-        .seeAll-btn:nth-of-type(2) {
-          display: none;
-        }
-
-        .creations-content-container {
-          order: 2;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 3rem;
-
-          .creation-box {
-            height: auto;
-            height: 45rem;
-            max-width: 25rem;
-          }
-        }
+      .seeAll-btn.btn2 {
+        display: none;
       }
     }
   }
