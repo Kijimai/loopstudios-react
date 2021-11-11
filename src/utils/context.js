@@ -4,6 +4,9 @@ const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
   const [navActive, setNavActive] = useState(false)
+  const [viewport, setViewport] = useState('')
+
+  
 
   const handleNavBtn = () => {
     setNavActive(!navActive)

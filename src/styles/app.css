@@ -1,6 +1,7 @@
 :root {
   font-size: 10px;
   --color-white: 0 0% 100%;
+  --color-black: 0 0% 0%;
 }
 
 /* Box sizing rules */
@@ -250,6 +251,71 @@ body {
     width: 100%;
     max-width: 73.1rem;
   }
+}
+.creations {
+  margin: 9.6rem 0;
+}
+.creations .creations-inner-container {
+  display: flex;
+  flex-direction: column;
+}
+.creations .creations-inner-container h2 {
+  font-size: 3.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+.creations .creations-inner-container .seeAll-btn {
+  cursor: pointer;
+  align-self: center;
+  order: 2;
+  font-size: 1.4rem;
+  padding: 1.3rem 4rem;
+  margin-top: 3.4rem;
+  background-color: transparent;
+  text-transform: uppercase;
+  border: 0.1rem solid hsl(var(--color-black));
+  font-family: "Alata", sans-serif;
+  letter-spacing: 0.5rem;
+}
+.creations .creations-inner-container .creations-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: 100%;
+}
+.creations .creations-inner-container .creations-content-container .creation-box {
+  position: relative;
+  cursor: pointer;
+  min-height: 12rem;
+  width: 100%;
+}
+.creations .creations-inner-container .creations-content-container .creation-box .creation-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease opacity;
+}
+.creations .creations-inner-container .creations-content-container .creation-box h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  padding: 2rem;
+  color: hsl(var(--color-white));
+  font-weight: 300;
+  line-height: 1;
+  max-width: 20rem;
+}
+.creations .creations-inner-container .creations-content-container .creation-box:hover .creation-img {
+  opacity: 0.5;
+}
+.creations .creations-inner-container .creations-content-container .creation-box:hover h3 {
+  color: hsl(var(--color-black));
 }
 
 /*# sourceMappingURL=app.css.map */
