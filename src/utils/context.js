@@ -20,7 +20,7 @@ const AppProvider = ({ children }) => {
   }
 
   return (
-    <AppContext.Provider value={{ handleNavBtn, navActive, viewWidth }}>
+    <AppContext.Provider value={{ handleNavBtn, navActive, setNavActive, viewWidth }}>
       {children}
     </AppContext.Provider>
   )
