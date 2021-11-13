@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Kijimai/loopstudios-react)
-- Live Site URL: [Add live site URL here](https://loopstudios-react-kijimai.netlify.app/)
+- Solution URL: [View Repository](https://github.com/Kijimai/loopstudios-react)
+- Live Site URL: [View Live Site](https://loopstudios-react-kijimai.netlify.app/)
 
 ## My process
 
