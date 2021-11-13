@@ -4,30 +4,46 @@ import { data } from "../../data/data"
 import navHamburger from "../../images/icon-hamburger.svg"
 import navClose from "../../images/icon-close.svg"
 import { useGlobalContext } from "../../utils/context"
-const Navigator = () => {
-  const { navActive, handleNavBtn, viewWidth, setNavActive } =
-    useGlobalContext()
+import DesktopNav from "./DesktopNav"
 
-  // if (viewWidth > 768) {
-  //   setNavActive(true)
-  // }
+const Navigator = () => {
+  const {
+    navActive,
+    handleNavBtn,
+    viewWidth,
+    setNavActive,
+    closeNav,
+    isMobile,
+  } = useGlobalContext()
 
   return (
-    <nav className="navigator">
-      <div className="main-navbar">
-        <div className="logo">
-          <img src={logo} alt="logo" />
+    <nav className={`navigator ${navActive && "active"}`}>
+      <div className={`inner-navigator ${navActive && "active"}`}>
+        <div className="logo-container">
+          <img src={logo} alt="brand logo" className="logo" />
         </div>
-        <button>
-          <img
-            onClick={handleNavBtn}
-            src={navActive ? navClose : navHamburger}
-            alt="navigator button"
-          />
-        </button>
+        {isMobile ? (
+          <button className="navBtn" onClick={handleNavBtn}>
+            <img
+              src={navActive ? navClose : navHamburger}
+              alt="navigator button"
+            />
+          </button>
+        ) : (
+          <DesktopNav />
+        )}
       </div>
-      <div className="mobile-navbar"></div>
-      <div className="desktop-navbar"></div>
+      <ul className={`mobileNav ${navActive && "active"}`}>
+        {data.map((navLink, index) => {
+          return (
+            <li key={index}>
+              <button onClick={closeNav} className="navLink">
+                {navLink}
+              </button>
+            </li>
+          )
+        })}
+      </ul>
     </nav>
   )
 }

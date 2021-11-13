@@ -5,8 +5,10 @@ import Hero from "./Hero"
 const Header = () => {
   return (
     <header className="main-header">
-      <Navigator />
-      <Hero />
+      <div className="inner-main-header">
+        <Navigator />
+        <Hero />
+      </div>
     </header>
   )
 }
