@@ -39,6 +39,9 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      <div className="attribution">
+        Lovingly coded by <a href="https://github.com/Kijimai">JibbyCodes</a>
+      </div>
     </footer>
   )
 }
